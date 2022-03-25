@@ -1,14 +1,9 @@
 
 import { useEffect, useState } from 'react';
-import right from '../assets/icons/right.svg';
 
-export const TYPE_NORMAL = "normal";
-export const TYPE_SQUARE = "square";
 
 function ControlButton(props) {
-
     const [selected, setSelected] = useState(props.selected || props.alwaysselected);
-
     useEffect(() => {
         setSelected(props.selected || props.alwaysselected);
     }, [props.selected])
@@ -21,6 +16,7 @@ function ControlButton(props) {
     const title = props.title;
     const subtitleselected = props.subtitleselected;
     const subtitle = props.subtitle;
+    const arrow = props.arrow;
     const className = " select-none flex  w-full  relative items-center cursor-pointer " + (props.className || " pl-2.5 pr-1  ");
 
     return (<div className={className} onClick={onClickControl} >
@@ -35,7 +31,7 @@ function ControlButton(props) {
             {subtitleselected && selected && <h4 className="select-none  p-0 text-white text-opacity-50 font-macfont text-macro font-normal leading-3">{subtitleselected}</h4>}
 
         </div>}
-        {props.arrow && <img className={(icon ? "right-2.5 " : "right-1 ") + 'absolute'} src={right} />}
+        {arrow && <img className={(icon ? "right-2.5 " : "right-1 ") + 'absolute'} src={arrow} />}
     </div >)
 }
 export default ControlButton;

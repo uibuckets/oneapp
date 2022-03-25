@@ -8,7 +8,7 @@ import air from './assets/icons/air.svg';
 import bright from './assets/icons/bright.svg';
 import mirror from './assets/icons/mirror.svg';
 import music from './assets/icons/music.svg';
-
+import right from "./assets/icons/right.svg"
 
 import Background from './components/Background';
 import ControlButton from './components/ControlButton';
@@ -24,20 +24,20 @@ function App() {
         <Background className={"absolute right-20 top-28"} width={"304px"} height={"380px"}>
           <div className='pt-2.5 pr-2.5 pl-2.5 w-full h-full flex flex-wrap content-start'>
             <Background className={"flex flex-col py-2.5 justify-between"} width={"136px"} height={"138px"} >
-              <ControlButton arrow={true} icon={wifi} title={"Wi-Fi"} subtitle={"Off"} subtitleselected={"My Phone"} />
-              <ControlButton arrow={true} icon={blue} title={"Bluetooth"} subtitle={"Off"} subtitleselected={"On"} />
-              <ControlButton arrow={true} icon={air} title={"AirDrop"} subtitle={"Off"} subtitleselected={"On"} />
+              <ControlButton arrow={right} icon={wifi} title={"Wi-Fi"} subtitle={"Off"} subtitleselected={"My Phone"} />
+              <ControlButton arrow={right} icon={blue} title={"Bluetooth"} subtitle={"Off"} subtitleselected={"On"} />
+              <ControlButton arrow={right} icon={air} title={"AirDrop"} subtitle={"Off"} subtitleselected={"On"} />
             </Background>
             <div className='flex flex-col h-fit '>
               <Background className={"ml-2.5 flex justify-center items-center"} width={"136px"} height={"64px"} >
-                <ControlButton alwaysselected={true} arrow={true} icon={dnd} title={"Do Not Disturb"} />
+                <ControlButton alwaysselected={true} arrow={right} icon={dnd} title={"Do Not Disturb"} />
               </Background>
               <div className='flex h-fit w-full ml-2.5 mt-2.5'>
                 <Background width={"64px"} height={"64px"} >
-                  <MiniControlButton arrow={false} icon={bright} title={"Keyboard Brightness"} />
+                  <MiniControlButton icon={bright} title={"Keyboard Brightness"} />
                 </Background>
                 <Background className={"ml-2"} width={"64px"} height={"64px"} >
-                  <MiniControlButton arrow={false} icon={mirror} title={"Screen Mirroring"} />
+                  <MiniControlButton icon={mirror} title={"Screen Mirroring"} />
                 </Background>
               </div>
             </div>
