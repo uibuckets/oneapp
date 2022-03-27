@@ -10,11 +10,11 @@ import mirror from './assets/icons/mirror.svg';
 import music from './assets/icons/music.svg';
 import right from "./assets/icons/right.svg"
 
-import Background from './components/Background';
-import ControlButton from './components/ControlButton';
-import MiniControlButton from './components/MiniControlButton';
-import Slider from './components/Slider';
-import IconButton from './components/IconButton';
+import { Background } from './components/Background';
+import { ControlButton } from './components/ControlButton';
+import { MiniControlButton } from './components/MiniControlButton';
+import { Slider } from './components/Slider';
+import { IconButton } from './components/IconButton';
 
 function App() {
   return (
