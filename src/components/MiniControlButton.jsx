@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-function MiniControlButton(props) {
+export const MiniControlButton = (props) => {
 
     const [selected, setSelected] = useState(props.selected);
 
@@ -27,4 +27,3 @@ function MiniControlButton(props) {
         </div>
     </div >)
 }
-export default MiniControlButton;

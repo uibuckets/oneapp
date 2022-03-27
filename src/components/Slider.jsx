@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Slider = props => {
+export const Slider = (props) => {
 
     const inputSlideDiv = useRef(null);
     const inputSlideThumbDiv = useRef(null)

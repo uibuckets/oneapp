@@ -1,8 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-
-function ControlButton(props) {
+export const ControlButton = (props) => {
     const [selected, setSelected] = useState(props.selected || props.alwaysselected);
     useEffect(() => {
         setSelected(props.selected || props.alwaysselected);
@@ -34,4 +33,3 @@ function ControlButton(props) {
         {arrow && <img className={(icon ? "right-2.5 " : "right-1 ") + 'absolute'} src={arrow} />}
     </div >)
 }
-export default ControlButton;

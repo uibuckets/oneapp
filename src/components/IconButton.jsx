@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from 'react';
 
-function IconButton(props) {
+export const IconButton = (props) => {
 
     const [selected, setSelected] = useState(props.selected || props.alwaysselected);
 
@@ -22,4 +22,3 @@ function IconButton(props) {
         </div>
     </div >)
 }
-export default IconButton;
